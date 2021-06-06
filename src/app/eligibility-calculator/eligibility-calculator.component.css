@@ -1,0 +1,65 @@
+.ec-heading {
+    text-align: center;
+    background: #FCFCFF;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.ec-form {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ec-input-fields {
+    padding: 30px 60px;
+}
+
+.ec-card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px #2321321F;
+}
+
+.ec-loan-details {
+    background-color: #9F62C9;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 80px 30px 80px 30px;
+    text-align: center;
+    border-radius: 0px 25px 25px 0;
+    box-shadow: 0px 0px 30px #2321321F;
+}
+
+.ec-getmoney-btn {
+    background-color: #fff;
+    color: #9F62C9;
+    height: 50px;
+    width: 190px;
+    border-radius: 40px;
+}
+
+.ec-getmoney-btn:hover {
+    background-color: #663399;
+    color: #fff;
+}
+
+.form-check-input:checked {
+    background-color: #663399;
+    border-color: #663399;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    background-color: #663399;
+}
+
+.form-switch .form-check-input {
+    height: 1.5em !important;
+    width: 3em !important;
+}

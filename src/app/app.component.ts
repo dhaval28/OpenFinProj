@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'open-finance-project';
+  constructor() { }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    let navElem = document.querySelector('.navbar');
+    console.log(navElem);
+    if (window.scrollY > 10) {
+      navElem?.setAttribute('style', 'background-color: white !important');
+    }
+    else {
+      navElem?.setAttribute('style', 'background-color: transparent !important');
+    }
+  }
 }

@@ -1,0 +1,72 @@
+<div class="row ec-form">
+    <div class="col-8 ec-card">
+        <h5 class="ec-heading">Eligibility Calculator</h5>
+        <br>
+        <div class="ec-input-fields">
+            <div>
+                <span>Monthly Income</span>
+                <br>
+                <h3>
+                    ₹ {{ monthlyInc | number:'1.0-2':'en-IN' }}
+                </h3>
+                <input [(ngModel)]="monthlyInc" min="100000" max="300000" type="range" class="form-range"
+                    id="monthlyIncRange">
+                <span>
+                    <small>₹ 1,00,000</small>
+                    <small style="float: right;">₹ 3,00,000</small>
+                </span>
+            </div>
+            <br>
+            <div>
+                <span>Monthly Expense</span>
+                <br>
+                <h3>
+                    ₹ {{ monthlyExp | number:'1.0-2':'en-IN' }}
+                </h3>
+                <input [(ngModel)]="monthlyExp" type="range" max="100000" class="form-range" id="monthlyExpRange">
+            </div>
+            <br>
+            <div>
+                <span>Repayment Tenure</span>
+                <br>
+                <select style="border: none; border-radius: 0; border-bottom: 1px solid black;"
+                    [(ngModel)]="repayTenure" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option value="" selected>Please Select</option>
+                    <option value="1">6 months</option>
+                    <option value="2">12 months</option>
+                    <option value="3">24 months</option>
+                    <option value="4">Greater than 24 months</option>
+                </select>
+            </div>
+            <br>
+            <div style="display: flex">
+                <span>Do you have any existing loans?</span>
+                <div class="form-check form-switch" style="margin-left: 25px;">
+                    <input [(ngModel)]="isExistingLoan" style="cursor: pointer;" class="form-check-input"
+                        type="checkbox" id="existingLoansSwitch">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="existingEMI">EMI of existing load (optional)</label>
+                <input style="border: none; border-radius: 0; border-bottom: 1px solid black;" type="number"
+                    class="form-control" [(ngModel)]="existingEMI" id="existingEMI" placeholder="₹ 15,000">
+            </div>
+        </div>
+    </div>
+    <div class="col-4" style="position: relative;">
+        <div class="ec-loan-details">
+            <span>Loan Amount</span>
+            <br>
+            <h3>₹ 1,00,000</h3>
+            <br>
+            <br>
+            <span>Your EMI will be</span>
+            <br>
+            <h3>₹ 15,000</h3>
+            <br><br>
+            <button class="ec-getmoney-btn">Get Money</button>
+        </div>
+
+    </div>
+</div>
